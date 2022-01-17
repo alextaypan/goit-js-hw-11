@@ -43,7 +43,6 @@ function onSearchForm(e) {
         renderGallery(data.hits);
         simpleLightBox = new SimpleLightbox('.gallery a').refresh();
         notifImagesFound(data);
-
         if (data.totalHits > perPage) {
           loadMoreBtn.classList.remove('is-hidden');
         }
@@ -59,9 +58,7 @@ function onLoadMoreBtn() {
     .then(({ data }) => {
       renderGallery(data.hits);
       simpleLightBox = new SimpleLightbox('.gallery a').refresh();
-
       const totalPages = data.totalHits / perPage;
-
       if (page > totalPages) {
         loadMoreBtn.classList.add('is-hidden');
         notifEndOfSearch();
