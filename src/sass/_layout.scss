@@ -1,1 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 
+.search-container {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  background-color: #3f57b3;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 20%;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: 8px 10px;
+    font: inherit;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    border: none;
+    background-color: rgb(200, 200, 200);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+}
+
+.gallery-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+}
+
+.gallery,
+.info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  margin-left: -20px;
+  padding-top: 60px;
+  justify-content: center;
+}
+
+.gallery__link {
+  margin-top: 20px;
+  margin-left: 20px;
+  min-width: 320px;
+  flex-basis: calc((100% - 80px) / 4);
+  border: 2px solid rgb(241, 238, 238);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  &:hover,
+  &:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gallery-item__img {
+  display: block;
+  height: 30vh;
+}
+
+.info {
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  &:not(:first-child) {
+    margin-left: 5px;
+  }
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
+.load-more {
+  display: block;
+  margin: 25px auto 0 auto;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f57b3;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  font: inherit;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #2b3e88;
+    transition: all 0.3s;
+  }
+}
