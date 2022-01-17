@@ -31,11 +31,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2.5em;
+    width: 40px;
     border: none;
     background-color: rgb(200, 200, 200);
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    &:hover {
+      background-color: #808080;
+      transition: all 0.3s;
+    }
   }
 }
 
